@@ -1,7 +1,0 @@
-com\example\miniautorizador\concurrency\TransacaoConcorrenciaTest.class
-com\example\miniautorizador\controller\TransacaoControllerE2ETest.class
-com\example\miniautorizador\controller\CartaoControllerE2ETest.class
-com\example\miniautorizador\service\CartaoServiceTest.class
-com\example\miniautorizador\controller\CartaoControllerIntegrationTest.class
-com\example\miniautorizador\controller\TransacaoControllerIntegrationTest.class
-com\example\miniautorizador\service\TransacaoServiceTest.class
