@@ -35,11 +35,8 @@ public class TransacaoService {
     @Transactional
     public void processarTransacao(TransacaoDto transacaoDto) {
         Cartao cartao = buscarCartao(transacaoDto.getNumeroCartao());
-
         autorizarTransacao(transacaoDto, cartao);
-
         debitarSaldo(cartao, transacaoDto);
-
         salvarCartao(cartao);
     }
 
@@ -55,7 +52,6 @@ public class TransacaoService {
      */
     private void autorizarTransacao(TransacaoDto transacaoDto, Cartao cartao) {
         AuthorizationRule authorizationChain = authorizationChainFactory.createDefaultChain();
-
         authorizationChain.authorize(transacaoDto, cartao);
     }
 

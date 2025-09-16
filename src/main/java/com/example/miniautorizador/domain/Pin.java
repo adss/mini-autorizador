@@ -1,13 +1,16 @@
 package com.example.miniautorizador.domain;
 
+import lombok.Getter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.Objects;
 
 public class Pin {
+
     private static final PasswordEncoder PASSWORD_ENCODER = new BCryptPasswordEncoder();
 
+    @Getter
     private final String hashedValue;
     private final String rawValue;
 
@@ -47,10 +50,6 @@ public class Pin {
         }
 
         return PASSWORD_ENCODER.matches(rawPin, hashedValue);
-    }
-
-    public String getHashedValue() {
-        return hashedValue;
     }
 
     @Override

@@ -25,11 +25,4 @@ public interface AuthorizationRule {
      * @return A próxima regra
      */
     AuthorizationRule setNext(AuthorizationRule next);
-    
-    /**
-     * Obtém a próxima regra na cadeia.
-     * 
-     * @return A próxima regra ou null se for a última
-     */
-    AuthorizationRule getNext();
 }

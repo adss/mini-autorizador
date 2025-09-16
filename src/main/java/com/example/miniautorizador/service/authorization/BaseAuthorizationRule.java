@@ -17,11 +17,6 @@ public abstract class BaseAuthorizationRule implements AuthorizationRule {
         return next;
     }
     
-    @Override
-    public AuthorizationRule getNext() {
-        return next;
-    }
-    
     /**
      * Executa a próxima regra na cadeia, se existir.
      * 

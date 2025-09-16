@@ -1,7 +1,9 @@
 package com.example.miniautorizador.exception;
 
 import com.example.miniautorizador.enums.AutorizacaoErro;
+import lombok.Getter;
 
+@Getter
 public class TransacaoNaoAutorizadaException extends RuntimeException {
     private final AutorizacaoErro erro;
 
@@ -10,7 +12,4 @@ public class TransacaoNaoAutorizadaException extends RuntimeException {
         this.erro = erro;
     }
 
-    public AutorizacaoErro getErro() {
-        return erro;
-    }
 }

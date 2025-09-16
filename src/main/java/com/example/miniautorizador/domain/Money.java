@@ -42,22 +42,6 @@ public class Money {
         return this.amount.compareTo(other.amount) > 0;
     }
 
-    public boolean isGreaterThanOrEqualTo(Money other) {
-        return this.amount.compareTo(other.amount) >= 0;
-    }
-
-    public boolean isLessThan(Money other) {
-        return this.amount.compareTo(other.amount) < 0;
-    }
-
-    public boolean isLessThanOrEqualTo(Money other) {
-        return this.amount.compareTo(other.amount) <= 0;
-    }
-
-    public boolean isPositive() {
-        return this.amount.compareTo(BigDecimal.ZERO) > 0;
-    }
-
     public boolean isZero() {
         return this.amount.compareTo(BigDecimal.ZERO) == 0;
     }

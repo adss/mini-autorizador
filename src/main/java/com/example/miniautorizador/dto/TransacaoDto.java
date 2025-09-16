@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.DecimalMin;
-import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -17,6 +16,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @Builder
 public class TransacaoDto {
+
     @NotBlank(message = "Número do cartão é obrigatório")
     @Pattern(regexp = "^\\d{13,19}$", message = "Número do cartão deve conter entre 13 e 19 dígitos")
     private String numeroCartao;
@@ -26,6 +26,6 @@ public class TransacaoDto {
     private String senhaCartao;
 
     @NotNull(message = "Valor da transação é obrigatório")
-    @DecimalMin(value = "0.01", inclusive = true, message = "Valor deve ser maior que zero")
+    @DecimalMin(value = "0.01", message = "Valor deve ser maior que zero")
     private BigDecimal valor;
 }
